@@ -1,0 +1,379 @@
+/* Write your styles */
+body{
+    
+}
+a:focus, a:hover{
+    text-decoration: none;
+}
+.am-margin-top-10{
+    margin-top: 10px;
+}
+
+/*
+* Remove whitespace between child elements when using `inline-block`
+*/
+.am-vertical-align {
+  font-size: 0;
+}
+/*
+* The `@{ns}vertical-align` container needs a specific height
+*/
+.am-vertical-align:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+/*
+* Sub-object which can have any height
+* 1. Reset whitespace hack
+*/
+.am-vertical-align-middle,
+.am-vertical-align-bottom {
+  display: inline-block;
+  font-size: 1.6rem;
+  /* 1 */
+  max-width: 100%;
+}
+.am-vertical-align-middle {
+  vertical-align: middle;
+}
+.am-vertical-align-bottom {
+  vertical-align: bottom;
+}
+.am-responsive-width {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 100%;
+  height: auto;
+}
+
+
+/*顶部导航*/
+.main-top-nav{
+    position: absolute;
+    top: 1.5rem;
+    width: 50%;
+    left: 10%;
+}
+.main-top-nav h3{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    font-size: 1.6rem;
+}
+.main-top-nav a{
+    color: #fff;
+}
+.main-top-nav a.active{
+    color: #af70cd;
+}
+.main-top-nav .icon{
+    font-size: 2rem;
+    vertical-align: text-bottom;
+}
+
+/*首页*/
+.main-wrap{
+    background-image: url(../i/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main{
+    width: 100%;
+    text-align: center;
+}
+.main img{
+    opacity: 0.45;
+    margin-bottom: 3rem;
+}
+.menu{
+    padding: 5rem 10%;
+    text-align: center;
+    background-color: rgba(240,240,240,0.6);   
+}
+.menu a{
+     color: #fff;
+}
+.menu h3{
+    margin-top: 20px;
+}
+.menu 
+.icon{
+    font-size: 10rem;
+    color: #9755b7;
+}
+.top-nav{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+.top-nav a{
+    color: #fff;
+}
+.top-nav button{
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
+    color: #fff;
+    background: none;
+    border:1px solid #fff;
+}
+
+
+/*登录页面*/
+.login-main-wrap{
+    background-image: url(../i/login_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.login-main{
+    width: 100%;
+    text-align: center;
+}
+.login-main img{
+    margin-bottom: 3rem;
+}
+.login-main form{
+    width: 35%;
+    margin: 0 auto;
+}
+.login-main  input{
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.login-main  input:focus{
+    background: none;
+}
+.login-main form .icon{
+    color: #fff;
+    font-size: 2.5rem;
+}
+.login-main .control-label{
+    text-align: left;
+}
+.login-main .col-sm-10{
+    padding-left: 0;
+}
+.login-main button{
+    background: #9755b7;
+    border: 1px solid #9755b7;
+    color: #fff;
+    width: 40%;
+}
+
+/*会员搜索*/
+.vip_serach_main_wrap{
+    background-image: url(../i/vip_search_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.vip_serach_main_wrap .am-vertical-align-middle{
+    width: 100%;
+}
+.vip_serach_main_wrap .am-vertical-align-middle{
+    font-size: 1.4rem;
+}
+.vip_serach_main{
+    width: 80%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem 0 1rem 0;
+}
+.vip_serach_main h2{
+    background: #af70cd;
+    color: #fff;
+    padding: 0 10% 3px 9%;
+    position: relative;
+    text-indent: -1rem;
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.vip_serach_main h2 img{
+    position: absolute;
+    top: -8px;
+    left: 5%;
+}
+.vip_serach_main form{
+    padding: 1rem 0 0 0;
+}
+.vip_serach_main form button{
+    background: #ab7fc0;
+    color: #fff;  
+}
+.vip_serach_main form,.vip_serach_main table{
+    width: 90%;
+    margin: 0 auto;
+}
+.vip_serach_main .btn-edit{
+    background: #ae83c2;
+    border-color: #ae83c2;
+}
+.vip_serach_main .btn-delete{
+    background: #f38f63;
+    border-color: #f38f63;
+}
+.vip_serach_main .btn-add{
+    background: #e55491;
+    border-color: #e55491;
+}
+.vip_serach_main .btn-check{
+    background: #43cabc;
+    border-color: #43cabc;
+}
+.vip_serach_main .pagination{
+    margin: 10px 0 0 0;
+}
+
+/*会员登记*/
+.vip_reg_main_wrap{
+    background-image: url(../i/vip_search_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.vip_reg_main_wrap .am-vertical-align-middle{
+    width: 100%;
+}
+.vip_reg_main_wrap .am-vertical-align-middle{
+    font-size: 1.4rem;
+}
+.vip_reg_main{
+    width: 80%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 1rem 0 0 0;
+}
+.vip_reg_main h2{
+    background: #af70cd;
+    color: #fff;
+    padding: 0 10% 3px 10%;
+    position: relative;
+    text-indent: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+.vip_reg_main h2 img{
+    position: absolute;
+    top: -8px;
+    left: 10%;
+}
+.vip_reg_main form{
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+}
+.vip_reg_main .vip_reg_main_part_1,.vip_reg_main .vip_reg_main_part_2{
+    padding: 20px 5% 0 5%;
+}
+.vip_reg_main .vip_reg_main_part_2{
+    background: #e3d1ec;
+    padding-bottom: 20px;
+}
+.vip_reg_main .vip_reg_main_part_2 textarea{
+    border-radius: 20px;
+    height: 3rem;
+}
+.vip_reg_main .submit{
+    text-align: center;
+}
+.vip_reg_main .submit button{
+    width: 12rem;
+}
+.vip_reg_main .submit .btn-submit{
+    background: #af70cd;
+    color: #fff;
+}
+.vip_reg_main .submit .btn-cancel{
+    background: #835ea5;
+    color: #fff;
+}
+
+/*添加消费记录*/
+.add_record{
+}
+.add_record_main{
+    width: 94%;
+    margin: 0 auto;
+}
+.add_record .info-bar{
+    background: #e3d1ec;
+    height: 8rem;
+    margin-bottom: 3rem;
+    position: relative;
+    border-radius: 5px;
+}
+.add_record .info-bar .avstar{
+    position: absolute;
+    left: 46%;
+    width: 8%;
+    bottom: -2rem;
+}
+.add_record .info-bar .basic_info{
+    position: absolute;
+    left: 25%;
+    width: 20%;
+    bottom: 1rem;
+    color: #fff;
+}
+.add_record .info-bar .mobile{
+    position: absolute;
+    right: 28%;
+    width: 15%;
+    bottom: 1rem;
+    color: #fff;
+}
+.add_record .info-bar .basic_info .realname{
+    font-size: 2rem;
+}
+.add_record h3{
+    background-image: url(../i/title_bg_2.png);
+    background-repeat: no-repeat;
+    height: 38px;
+    line-height: 38px;
+    color: #fff;
+    padding-left: 3%;
+    text-align: left;
+    font-size: 1.8rem;
+}
+.add_record .submit{
+    text-align: center;
+}
+.add_record .submit button{
+    width: 12rem;
+}
+.add_record .submit .btn-submit{
+    background: #af70cd;
+    color: #fff;
+}
+.add_record .submit .btn-cancel{
+    background: #835ea5;
+    color: #fff;
+}
+/*模态框*/
+#doc-modal-1 .modal-content,#doc-modal-2 .modal-content{
+    padding-bottom: 20px;
+}
+#doc-modal-1 .close,#doc-modal-2 .close{
+    margin-right: 5px;
+}
+#doc-modal-1 .modal-body{
+    padding: 0;
+}
+#doc-modal-2 .modal-body{
+    padding: 0;
+}
+#doc-modal-2 h4{
+    text-align: left;
+}
+#doc-modal-2 table td{
+    text-align: left;
+}
+#doc-modal-2 .pagination{
+    margin: 10px 0 0 0;
+}
+
+
+

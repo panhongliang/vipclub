@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.eyfast.vipclub.mapping.DicGroupMapper" >
+  <resultMap id="BaseResultMap" type="com.eyfast.vipclub.entity.DicGroup" >
+    <id column="ID" property="id" jdbcType="INTEGER" />
+    <result column="DIC_KEY" property="dicKey" jdbcType="INTEGER" />
+    <result column="DIC_NAME" property="dicName" jdbcType="VARCHAR" />
+    <result column="DIC_GROUP" property="dicGroup" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, DIC_KEY, DIC_NAME, DIC_GROUP
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from DICGROUP
+    where ID = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from DICGROUP
+    where ID = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.eyfast.vipclub.entity.DicGroup" >
+    insert into DICGROUP (ID, DIC_KEY, DIC_NAME, 
+      DIC_GROUP)
+    values (#{id,jdbcType=INTEGER}, #{dicKey,jdbcType=INTEGER}, #{dicName,jdbcType=VARCHAR}, 
+      #{dicGroup,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.eyfast.vipclub.entity.DicGroup" >
+    insert into DICGROUP
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="dicKey != null" >
+        DIC_KEY,
+      </if>
+      <if test="dicName != null" >
+        DIC_NAME,
+      </if>
+      <if test="dicGroup != null" >
+        DIC_GROUP,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="dicKey != null" >
+        #{dicKey,jdbcType=INTEGER},
+      </if>
+      <if test="dicName != null" >
+        #{dicName,jdbcType=VARCHAR},
+      </if>
+      <if test="dicGroup != null" >
+        #{dicGroup,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.eyfast.vipclub.entity.DicGroup" >
+    update DICGROUP
+    <set >
+      <if test="dicKey != null" >
+        DIC_KEY = #{dicKey,jdbcType=INTEGER},
+      </if>
+      <if test="dicName != null" >
+        DIC_NAME = #{dicName,jdbcType=VARCHAR},
+      </if>
+      <if test="dicGroup != null" >
+        DIC_GROUP = #{dicGroup,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.eyfast.vipclub.entity.DicGroup" >
+    update DICGROUP
+    set DIC_KEY = #{dicKey,jdbcType=INTEGER},
+      DIC_NAME = #{dicName,jdbcType=VARCHAR},
+      DIC_GROUP = #{dicGroup,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+  
+  <select id="selectByGroup" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from DICGROUP
+    where DIC_GROUP = #{group, jdbcType=VARCHAR}
+  </select>  
+</mapper>

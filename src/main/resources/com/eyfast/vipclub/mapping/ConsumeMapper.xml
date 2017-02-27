@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.eyfast.vipclub.mapping.ConsumeMapper" >
+  <resultMap id="BaseResultMap" type="com.eyfast.vipclub.entity.Consume" >
+    <id column="ID" property="id" jdbcType="INTEGER" />
+    <result column="CUSTOMER_ID" property="customerId" jdbcType="INTEGER" />
+    <result column="MONEY" property="money" jdbcType="DECIMAL" />
+    <result column="REMARK" property="remark" jdbcType="VARCHAR" />
+    <result column="buytime" property="buytime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, CUSTOMER_ID, MONEY, REMARK, buytime
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from CONSUME
+    where ID = #{id,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectByCustomerId2" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from CONSUME
+    where CUSTOMER_ID = #{customerId,jdbcType=INTEGER}
+  </select>
+
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from CONSUME
+    where ID = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.eyfast.vipclub.entity.Consume" >
+    insert into CONSUME (ID, CUSTOMER_ID, MONEY, 
+      REMARK, buytime)
+    values (#{id,jdbcType=INTEGER}, #{customerId,jdbcType=INTEGER}, #{money,jdbcType=DECIMAL}, 
+      #{remark,jdbcType=VARCHAR}, #{buytime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.eyfast.vipclub.entity.Consume" >
+    insert into CONSUME
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="customerId != null" >
+        CUSTOMER_ID,
+      </if>
+      <if test="money != null" >
+        MONEY,
+      </if>
+      <if test="remark != null" >
+        REMARK,
+      </if>
+      <if test="buytime != null" >
+        buytime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="customerId != null" >
+        #{customerId,jdbcType=INTEGER},
+      </if>
+      <if test="money != null" >
+        #{money,jdbcType=DECIMAL},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="buytime != null" >
+        #{buytime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.eyfast.vipclub.entity.Consume" >
+    update CONSUME
+    <set >
+      <if test="customerId != null" >
+        CUSTOMER_ID = #{customerId,jdbcType=INTEGER},
+      </if>
+      <if test="money != null" >
+        MONEY = #{money,jdbcType=DECIMAL},
+      </if>
+      <if test="remark != null" >
+        REMARK = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="buytime != null" >
+        buytime = #{buytime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.eyfast.vipclub.entity.Consume" >
+    update CONSUME
+    set CUSTOMER_ID = #{customerId,jdbcType=INTEGER},
+      MONEY = #{money,jdbcType=DECIMAL},
+      REMARK = #{remark,jdbcType=VARCHAR},
+      buytime = #{buytime,jdbcType=TIMESTAMP}
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByCustomerId" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from CONSUME
+    where CUSTOMER_ID = #{customerId,jdbcType=INTEGER}
+    order by buytime desc
+    <if test="length>0 and start >=0">
+    	limit #{start}, #{length}
+    </if>
+  </select>  
+  
+  <select id="countByCustomerId" resultType="int">
+    select 
+    count(1)
+    from CONSUME
+    where CUSTOMER_ID = #{customerId,jdbcType=INTEGER}
+  </select>    
+</mapper>

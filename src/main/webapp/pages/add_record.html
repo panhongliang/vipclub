@@ -1,0 +1,141 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <title>添加记录</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+  <meta name="msapplication-TileColor" content="#0e90d2">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  -->
+
+  <link rel="stylesheet" href="assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a
+  href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+<div class="add_record">
+    <h3>
+        <i class="icon am-icon-plus"></i>添加消费记录
+    </h3>
+
+    <div class="add_record_main">
+        <div class="info-bar">
+            <div class="basic_info">
+                <span class="realname">童小童</span>
+                <span class="sex">男</span>
+                <span class="age">26岁</span>
+            </div>
+            <img src="assets/i/avstar.png" alt="" class="avstar">
+            <div class="mobile">
+                13061903726
+            </div>
+
+        </div>
+
+        <form class="am-form am-form-horizontal am-g" role="form">
+            <div class="am-g ">
+                <div class="am-u-sm-6">
+                    <div class="am-form-group">
+                        <label for="card_num" class="am-u-sm-3 am-form-label">消费日期</label>
+                        <div class="am-u-sm-9">
+                            <input id="card_num" type="text" class="am-input-sm am-form-field am-round">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="am-g am-margin-top-10">
+                <div class="am-u-sm-6">
+                    <div class="am-form-group">
+                        <label for="cat_2" class="am-u-sm-3 am-form-label">消费金额</label>
+                        <div class="am-u-sm-9">
+                            <input id="cat_2" type="text" class="am-input-sm am-form-field am-round">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="am-g am-margin-top-10">
+                <div class="am-u-sm-9">
+                    <div class="am-form-group">
+                        <label for="remark" class="am-u-sm-2 am-form-label">备注</label>
+                        <div class="am-u-sm-10">
+                            <textarea rows="5" id="remark" class="am-input-sm am-form-field"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="am-g submit">
+                <div class="am-u-sm-3 am-u-sm-offset-3">
+                    <button type="submit" class="btn-submit am-btn am-btn-default am-round">提交</button>
+                </div>
+                <div class="am-u-sm-3 am-u-end">
+                    <button type="submit" class="btn-cancel am-btn am-btn-default am-round">取消</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+
+</body>
+</html>
