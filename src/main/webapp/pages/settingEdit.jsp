@@ -46,7 +46,7 @@
                 </a>
             </div>
             <div class="col-sm-3 col-md-3 col-lg-3">
-                <a href="/customer/toList">
+                <a href="/user/toList">
                     <i class="icon icon-vip_manage"></i>
                     <h3>帐号管理</h3>
                 </a>

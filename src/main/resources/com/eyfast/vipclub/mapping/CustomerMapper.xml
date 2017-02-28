@@ -404,7 +404,7 @@
     where ID = #{id,jdbcType=INTEGER}
   </update>
   <select id="selectByIdcard" resultMap="BaseResultMap">
-  	select * from customer t where t.idcard = #{idcard, jdbcType=VARCHAR}
+  	select * from CUSTOMER t where t.idcard = #{idcard, jdbcType=VARCHAR}
   </select>
   <select id="countSelective" resultType="int">
     select
